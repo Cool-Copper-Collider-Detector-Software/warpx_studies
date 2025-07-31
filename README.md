@@ -112,7 +112,8 @@ export LD_LIBRARY_PATH="$CONDA_PREFIX/targets/x86_64-linux/lib"
   -DCMAKE_CUDA_COMPILER="$CONDA_PREFIX/bin/nvcc" \
   -DCMAKE_CUDA_HOST_COMPILER="$(which mpicxx)" \
   -DCMAKE_C_COMPILER="$(which mpicc)" \
-  -DCMAKE_CXX_COMPILER="$(which mpicxx)"
+  -DCMAKE_CXX_COMPILER="$(which mpicxx)" \
+  -DWarpX_FFT=ON
 ```
 
 What these do
