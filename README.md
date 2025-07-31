@@ -50,6 +50,8 @@ conda install -c conda-forge -y \
   openmpi ucx mpi4py \
   gcc_linux-64=13 gxx_linux-64=13
 
+# C) Install ADIOS2 with OpenMPI (so we can use openpmd_backend = bp)
+conda install -c conda-forge "adios2=*=mpi_openmpi*"
 
 
 # C) Verify build tools
@@ -95,6 +97,9 @@ export CPATH="$CONDA_PREFIX/targets/x86_64-linux/include/nvtx3:$CONDA_PREFIX/tar
 export LIBRARY_PATH="$CONDA_PREFIX/targets/x86_64-linux/lib"
 export LD_LIBRARY_PATH="$CONDA_PREFIX/targets/x86_64-linux/lib"
 
+# help CMake find ADIOS2/openPMD (if using conda-provided openPMD)
+export ADIOS2_DIR="$CONDA_PREFIX"
+export openPMD_DIR="$CONDA_PREFIX"
 
 ```
 
