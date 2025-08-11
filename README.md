@@ -158,9 +158,9 @@ mpirun -np 4 ./warpx.3d inputs_test_3d_beam_beam_collision # run!
 
 # 8) To submit batch jobs
 
--Add txt files with the parameter combinations you want to run under `parameter_scans` (see example)
--Modify the first lines in `submit_warpx_array.sh` if necessary based on your setup.
--Launch in subshell: `./submit_warpx_array.sh`
+- Add txt files with the parameter combinations you want to run under `parameter_scans` (see example)
+- Modify the first lines in `submit_warpx_array.sh` if necessary based on your setup.
+- Launch in subshell: `./submit_warpx_array.sh`
 
 
 
